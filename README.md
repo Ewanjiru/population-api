@@ -1,0 +1,1 @@
+[![CircleCI](https://circleci.com/gh/Ewanjiru/sms-api.svg?style=svg)](https://circleci.com/gh/Ewanjiru/sms-api)
