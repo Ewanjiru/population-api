@@ -19,7 +19,17 @@ const validateLocation = (locationDetails) => {
   return (joi.validate(locationDetails, schema));
 };
 
+const validatePopulation = ({ femaleCount, maleCount, location }) => {
+  if (femaleCount && !maleCount) population = femaleCount + location.maleCount;
+  if (!femaleCount && maleCount) population = maleCount + location.femaleCount;
+  if (femaleCount && maleCount) population = femaleCount + maleCount;
+  if (!femaleCount && !maleCount) population = location && location.population;
+
+  return population;
+}
+
 module.exports = {
   validateId,
-  validateLocation
+  validateLocation,
+  validatePopulation
 };

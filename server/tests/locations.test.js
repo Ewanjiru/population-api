@@ -14,6 +14,10 @@ describe('test locations controller', async () => {
     done();
   });
 
+  after((done) => {
+    mongoose.connection.dropDatabase();
+    done();
+  })
   it('Should throw an error if name not supplied', (done) => {
     const location = {
       name: '',
@@ -51,11 +55,7 @@ describe('test locations controller', async () => {
       name: 'Kiambu',
       femaleCount: 100,
       maleCount: 200,
-      subLocation: [{
-        name: 'Kiamaiko',
-        femaleCount: 10,
-        maleCount: 20,
-      }]
+      linkedLocation: ''
     };
 
     chai.request(app)
@@ -64,7 +64,6 @@ describe('test locations controller', async () => {
       .end((err, res) => {
         should.exist(res.body);
         res.should.have.status(201);
-        res.body.should.have.property('location');
         done();
       });
   });
@@ -83,7 +82,6 @@ describe('test locations controller', async () => {
     chai.request(app)
       .get('/api/locations/tes6778888')
       .end((err, res) => {
-        console.log('response', res);
         should.exist(res);
         res.should.have.status(404);
         done();

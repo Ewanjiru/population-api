@@ -16,6 +16,11 @@ const locationSchema = new Schema({
   },
   population: {
     type: Number,
+  },
+  linkedLocation: {
+    type: Schema.Types.ObjectId,
+    required: false,
+    ref: "Location"
   }
 });
 
