@@ -8,7 +8,7 @@ BodyParser: This module was used to collect search data sent from the client sid
 
 Mongoose: An Object Data Modeling (ODM) library for MongoDB and Node.js
 
-MongoDB: PostgreSQL is a powerful, open source object-relational database system.
+MongoDB: is an open-source document database and leading NoSQL database
 
 **Prerequisites**
 
