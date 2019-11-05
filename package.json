@@ -21,7 +21,7 @@
     "joi": "^13.7.0",
     "joi-objectid": "^2.0.0",
     "lodash": "^4.17.15",
-    "mongoose": "^5.6.10",
+    "mongoose": "^5.7.5",
     "nodemon": "^1.19.1",
     "winston": "^2.4.4"
   },
