@@ -17,7 +17,7 @@
     "celebrate": "^8.0.2",
     "config": "^2.0.2",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "joi": "^13.7.0",
     "joi-objectid": "^2.0.0",
     "lodash": "^4.17.15",
